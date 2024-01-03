@@ -21,11 +21,11 @@
     <meta name="description" content="一、问题描述　　平时喜欢边听歌边敲代码（有种拯救世界的感觉），windows时一直用网易云，换了linux非常不方便，所以想给我的ubuntu（16.04）装一个。去官网找了一下，还真有linux版的，还特别标明是ubuntu 16.04（64位），良心软件啊，接下来就是载下来按部就班安装了。　　载下来是.deb格式的，需要用以下命令： 1dpkg -i 软件名.deb 　　开始一切都挺顺利，然而">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dpkg：错误：另外一个进程已经为 Dpkg 状态数据库 加锁">
-<meta property="og:url" content="https://vistary.gitee.io/2020/03/29/dpkg%EF%BC%9A%E9%94%99%E8%AF%AF%EF%BC%9A%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E8%BF%9B%E7%A8%8B%E5%B7%B2%E7%BB%8F%E4%B8%BA%20dpkg%20%E7%8A%B6%E6%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%20%E5%8A%A0%E9%94%81/index.html">
+<meta property="og:url" content="https://vistar-terry.github.io/2020/03/29/dpkg%EF%BC%9A%E9%94%99%E8%AF%AF%EF%BC%9A%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E8%BF%9B%E7%A8%8B%E5%B7%B2%E7%BB%8F%E4%B8%BA%20dpkg%20%E7%8A%B6%E6%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%20%E5%8A%A0%E9%94%81/index.html">
 <meta property="og:site_name" content="淋曦的进击手记">
 <meta property="og:description" content="一、问题描述　　平时喜欢边听歌边敲代码（有种拯救世界的感觉），windows时一直用网易云，换了linux非常不方便，所以想给我的ubuntu（16.04）装一个。去官网找了一下，还真有linux版的，还特别标明是ubuntu 16.04（64位），良心软件啊，接下来就是载下来按部就班安装了。　　载下来是.deb格式的，需要用以下命令： 1dpkg -i 软件名.deb 　　开始一切都挺顺利，然而">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://vistary.gitee.io/img/article/debug.jpg">
+<meta property="og:image" content="https://vistar-terry.github.io/img/article/debug.jpg">
 <meta property="article:published_time" content="2020-03-29T13:26:00.000Z">
 <meta property="article:modified_time" content="2020-05-25T01:36:56.807Z">
 <meta property="article:author" content="万俟淋曦">
@@ -33,7 +33,7 @@
 <meta property="article:tag" content="Ubuntu">
 <meta property="article:tag" content="debug">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://vistary.gitee.io/img/article/debug.jpg">
+<meta name="twitter:image" content="https://vistar-terry.github.io/img/article/debug.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -81,7 +81,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"vistary.gitee.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"❤","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"vistar-terry.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"❤","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -471,7 +471,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Dpkg：错误：另外一个进程已经为 Dpkg 状态数据库 加锁</div>
-      <div>https://vistary.gitee.io/2020/03/29/dpkg：错误：另外一个进程已经为 dpkg 状态数据库 加锁/</div>
+      <div>https://vistar-terry.github.io/2020/03/29/dpkg：错误：另外一个进程已经为 dpkg 状态数据库 加锁/</div>
     </div>
     <div class="license-meta">
       

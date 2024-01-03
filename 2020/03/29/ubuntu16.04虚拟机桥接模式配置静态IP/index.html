@@ -21,11 +21,11 @@
     <meta name="description" content="本教程仅供学习，如急需解决问题，仅供参考。 在虚拟机安装好ubuntu16.04后，发现只有NAT模式可以上网，而桥接模式不能上网，经过一番摸索总结方法如下： 一、配置IP地址、默认网关、子网掩码命令：  1. ifconfig(查看网卡信息)有两块网卡，配置ens33（以太网）我的是配置好的，你的显示可能和这个不一样，这一步只是看以太网卡的名字，配置时会用到 接下来切换用户，提高权限2. sud">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ubuntu16.04虚拟机桥接模式配置静态IP">
-<meta property="og:url" content="https://vistary.gitee.io/2020/03/29/ubuntu16.04%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81IP/index.html">
+<meta property="og:url" content="https://vistar-terry.github.io/2020/03/29/ubuntu16.04%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81IP/index.html">
 <meta property="og:site_name" content="淋曦的进击手记">
 <meta property="og:description" content="本教程仅供学习，如急需解决问题，仅供参考。 在虚拟机安装好ubuntu16.04后，发现只有NAT模式可以上网，而桥接模式不能上网，经过一番摸索总结方法如下： 一、配置IP地址、默认网关、子网掩码命令：  1. ifconfig(查看网卡信息)有两块网卡，配置ens33（以太网）我的是配置好的，你的显示可能和这个不一样，这一步只是看以太网卡的名字，配置时会用到 接下来切换用户，提高权限2. sud">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://vistary.gitee.io/img/article/linux.jpg">
+<meta property="og:image" content="https://vistar-terry.github.io/img/article/linux.jpg">
 <meta property="article:published_time" content="2020-03-29T12:20:00.000Z">
 <meta property="article:modified_time" content="2020-05-20T14:46:10.842Z">
 <meta property="article:author" content="万俟淋曦">
@@ -33,7 +33,7 @@
 <meta property="article:tag" content="Ubuntu">
 <meta property="article:tag" content="网络">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://vistary.gitee.io/img/article/linux.jpg">
+<meta name="twitter:image" content="https://vistar-terry.github.io/img/article/linux.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -81,7 +81,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"vistary.gitee.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"❤","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"vistar-terry.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"❤","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -489,7 +489,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>ubuntu16.04虚拟机桥接模式配置静态IP</div>
-      <div>https://vistary.gitee.io/2020/03/29/ubuntu16.04虚拟机桥接模式配置静态IP/</div>
+      <div>https://vistar-terry.github.io/2020/03/29/ubuntu16.04虚拟机桥接模式配置静态IP/</div>
     </div>
     <div class="license-meta">
       

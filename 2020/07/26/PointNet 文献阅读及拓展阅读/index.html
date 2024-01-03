@@ -21,11 +21,11 @@
     <meta name="description" content="一、概览论文地址：https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;1612.00593.pdf代码下载：https:&#x2F;&#x2F;github.com&#x2F;charlesq34&#x2F;pointnet论文框架：研究目的： 利用深度学习网络处理三维点云数据。 研究思路： 首先通过对齐网络保证点云对特定空间转换的不变性，然后将全局特征和局部特征进行串联，综合利用特征。 解决方法： 提出PointNet —— 一种直接对三维">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PointNet 文献翻译阅读及拓展阅读">
-<meta property="og:url" content="https://vistary.gitee.io/2020/07/26/PointNet%20%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E5%8F%8A%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB/index.html">
+<meta property="og:url" content="https://vistar-terry.github.io/2020/07/26/PointNet%20%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E5%8F%8A%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB/index.html">
 <meta property="og:site_name" content="淋曦的进击手记">
 <meta property="og:description" content="一、概览论文地址：https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;1612.00593.pdf代码下载：https:&#x2F;&#x2F;github.com&#x2F;charlesq34&#x2F;pointnet论文框架：研究目的： 利用深度学习网络处理三维点云数据。 研究思路： 首先通过对齐网络保证点云对特定空间转换的不变性，然后将全局特征和局部特征进行串联，综合利用特征。 解决方法： 提出PointNet —— 一种直接对三维">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://vistary.gitee.io/img/article/paper.jpg">
+<meta property="og:image" content="https://vistar-terry.github.io/img/article/paper.jpg">
 <meta property="article:published_time" content="2020-07-26T02:00:16.000Z">
 <meta property="article:modified_time" content="2024-01-01T09:43:26.217Z">
 <meta property="article:author" content="万俟淋曦">
@@ -34,7 +34,7 @@
 <meta property="article:tag" content="深度学习">
 <meta property="article:tag" content="计算机视觉">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://vistary.gitee.io/img/article/paper.jpg">
+<meta name="twitter:image" content="https://vistar-terry.github.io/img/article/paper.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -82,7 +82,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"vistary.gitee.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"❤","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"vistar-terry.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"❤","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -554,7 +554,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>PointNet 文献翻译阅读及拓展阅读</div>
-      <div>https://vistary.gitee.io/2020/07/26/PointNet 文献阅读及拓展阅读/</div>
+      <div>https://vistar-terry.github.io/2020/07/26/PointNet 文献阅读及拓展阅读/</div>
     </div>
     <div class="license-meta">
       

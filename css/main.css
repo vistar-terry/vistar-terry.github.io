@@ -187,13 +187,15 @@ h6:hover > .anchorjs-link {
   margin: 0.25rem 0;
   font-size: 1rem;
 }
+.footer-inner .footer-content {
+  font-weight: bold;
+}
 .footer-inner .statistics {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
 }
 .footer-inner .statistics > span {
-  flex: 1;
   margin: 0 0.25rem;
 }
 .footer-inner .statistics > *:nth-last-child(2):first-child {
@@ -224,8 +226,11 @@ h6:hover > .anchorjs-link {
   margin-bottom: 0.1rem;
 }
 @media (max-width: 424px) {
+  .footer-inner .footer-content {
+    font-weight: bold;
+  }
   .footer-inner .statistics {
-    flex-direction: column;
+    flex-direction: row;
   }
   .footer-inner .statistics > *:nth-last-child(2):first-child {
     text-align: center;
@@ -234,7 +239,7 @@ h6:hover > .anchorjs-link {
     text-align: center;
   }
   .footer-inner .beian {
-    flex-direction: column;
+    flex-direction: row;
   }
   .footer-inner .beian .beian-police {
     justify-content: center;

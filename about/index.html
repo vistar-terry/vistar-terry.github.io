@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://vistar-terry.github.io/img/info/wechat-group.jpg">
 <meta property="og:image" content="https://vistar-terry.github.io/img/info/Kalman.jpg">
 <meta property="article:published_time" content="2020-03-26T14:23:47.000Z">
-<meta property="article:modified_time" content="2024-01-03T12:18:36.249Z">
+<meta property="article:modified_time" content="2024-03-03T12:08:01.140Z">
 <meta property="article:author" content="万俟淋曦">
 <meta property="article:tag" content="万俟淋曦,CSDN,Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -364,28 +364,30 @@
         gap: 10px;
         justify-content: space-around;
     }
-
     .image-container {
         position: relative;
         width: calc(33.33% - 10px); /* Initial width, 3 columns */
         overflow: hidden;
         margin-bottom: 20px;
+        padding: 0;
+        margin: 0;
     }
-    
     @media (max-width: 900px) {
         .image-container {
             width: calc(50% - 10px); /* 2 columns on smaller screens */
         }
     }
-    
     .image-container img {
         width: 100%;
-        height: auto;
+        height: 80%;
         display: block;
         object-fit: cover; /* Center and crop the image to cover the container */
         border-radius: 5px;
+        padding: 0;
+        margin: 0;
+
+
     }
-    
     .image-caption {
         position: absolute;
         bottom: 0;
@@ -396,11 +398,12 @@
         padding: 8px;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
+        min-height: 30%;
     }
-    
     p {
-        margin-left: 10px;
-        padding: 0;
+        margin: 0 0 0 10;
+        padding: 0px;
+        line-height: 1.1;
     }
 </style>
 

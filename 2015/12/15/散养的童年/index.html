@@ -1,0 +1,949 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/mylogo.png">
+  <link rel="icon" href="/img/mylogo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="万俟淋曦">
+  <meta name="keywords" content="万俟淋曦,CSDN,Python">
+  
+    <meta name="description" content="散养的童年当你有了孩子。。。。。。 许多人曾用这句话教育无知的我，每次我都在心里默默的反驳，当我有了孩子，这样对人家，指不定人家愿不愿意呢。作为孩子的我，我想说，我们需要散养。 好多次和朋友聊天，说起小时候爸妈忙，没人管，什么事都是自己一个人，基本就是散养长大的，其实我是羡慕这样的童年的。 首先要明确，没人管，不是真的没人管，真的没人管那岂不是要饿死。小孩子嘛，对大人的依赖性大，如今绝大多数家庭都">
+<meta property="og:type" content="article">
+<meta property="og:title" content="散养的童年">
+<meta property="og:url" content="https://vistar-terry.github.io/2015/12/15/%E6%95%A3%E5%85%BB%E7%9A%84%E7%AB%A5%E5%B9%B4/index.html">
+<meta property="og:site_name" content="淋曦的进击手记">
+<meta property="og:description" content="散养的童年当你有了孩子。。。。。。 许多人曾用这句话教育无知的我，每次我都在心里默默的反驳，当我有了孩子，这样对人家，指不定人家愿不愿意呢。作为孩子的我，我想说，我们需要散养。 好多次和朋友聊天，说起小时候爸妈忙，没人管，什么事都是自己一个人，基本就是散养长大的，其实我是羡慕这样的童年的。 首先要明确，没人管，不是真的没人管，真的没人管那岂不是要饿死。小孩子嘛，对大人的依赖性大，如今绝大多数家庭都">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://vistar-terry.github.io/img/article/grow.jpg">
+<meta property="article:published_time" content="2015-12-15T13:36:00.000Z">
+<meta property="article:modified_time" content="2024-04-23T14:24:39.402Z">
+<meta property="article:author" content="万俟淋曦">
+<meta property="article:tag" content="万俟淋曦,CSDN,Python">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://vistar-terry.github.io/img/article/grow.jpg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>散养的童年 | 淋曦的进击手记</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/icon.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"vistar-terry.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"❤","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>淋曦的进击手记</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/message/" target="_self">
+                <i class="iconfont icon-mail"></i>
+                <span>留言板</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/banner/post_banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="散养的童年"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        万俟淋曦
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2015-12-15 21:36" pubdate>
+          2015-12-15 21:36:00 星期二
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          985 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="凡心所向-素履所往"
+        id="heading-6e9a6c6024e8397904bab51de87c968c" role="tab" data-toggle="collapse" href="#collapse-6e9a6c6024e8397904bab51de87c968c"
+        aria-expanded="true"
+      >
+        凡心所向-素履所往
+        <span class="list-group-count">(11)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-6e9a6c6024e8397904bab51de87c968c"
+           role="tabpanel" aria-labelledby="heading-6e9a6c6024e8397904bab51de87c968c">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2015/09/10/%E5%AE%B6/" title="家"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">家</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2015/12/15/%E6%95%A3%E5%85%BB%E7%9A%84%E7%AB%A5%E5%B9%B4/" title="散养的童年"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">散养的童年</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2016/04/20/%E2%80%9C%E5%A4%9A%E4%B9%B0%E4%BA%9B%E8%8D%AF%E5%B0%91%E4%B9%B0%E4%BA%9B%E6%A3%BA%E6%9D%90%E2%80%9D%E9%9A%8F%E6%83%B3/" title="“多买些药少买些棺材”随想"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">“多买些药少买些棺材”随想</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2016/11/05/%E4%BA%A4%E7%82%B9/" title="交点"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">交点</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2016/11/05/%E4%BD%A0/" title="你"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">你</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2021/05/20/%E7%88%B1%E6%98%AF%E4%B8%80%E9%A6%96%E7%BC%A0%E7%BB%B5%E4%B8%8D%E6%96%AD%E7%9A%84%E6%AD%8C/" title="爱是一首缠绵不断的歌"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">爱是一首缠绵不断的歌</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/04/16/%E5%88%9D%E9%9C%81/" title="初霁"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">初霁</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/04/17/%E6%B6%88%E5%A4%B1%E7%9A%84%E8%8C%83%E5%BE%B7%E5%8D%8E/" title="消失的范德华"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">消失的范德华</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/04/20/%E4%B8%B4%E5%AE%89%E9%9B%AA%C2%B7%E4%B8%80/" title="临安雪·一"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">临安雪·一</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/04/20/%E4%B8%B4%E5%AE%89%E9%9B%AA%C2%B7%E4%BA%8C/" title="临安雪·二"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">临安雪·二</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/04/20/%E4%B8%B4%E5%AE%89%E9%9B%AA%C2%B7%E4%B8%89/" title="临安雪·三"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">临安雪·三</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">散养的童年</h1>
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-04-23T22:24:39+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="散养的童年"><a href="#散养的童年" class="headerlink" title="散养的童年"></a>散养的童年</h1><p>当你有了孩子。。。。。。<br/></p>
+<p>许多人曾用这句话教育无知的我，每次我都在心里默默的反驳，当我有了孩子，这样对人家，指不定人家愿不愿意呢。作为孩子的我，我想说，我们需要散养。<br/></p>
+<p>好多次和朋友聊天，说起小时候爸妈忙，没人管，什么事都是自己一个人，基本就是散养长大的，其实我是羡慕这样的童年的。<br/></p>
+<p>首先要明确，没人管，不是真的没人管，真的没人管那岂不是要饿死。小孩子嘛，对大人的依赖性大，如今绝大多数家庭都是一个孩子，一些基本的事，比如送上学，回家有饭吃，洗衣服，收拾房间等等，都是父母包办。在绝大多数中国人眼里，父母为小孩子做这些事是应当应分的，小时候无知的我们也理所应当的接受着，没有人提出异议，一切都祥和有序的重复着。这是错的！我们都错了！父母的初衷当然是好的，相信每个孩子也感激万分（对于一些觉得“这是应该的”的孩子，这里暂不赘述）。但对于每一个人呢，小时候像小羊一样圈养着，有人送草吃，有人给打扫圈舍，天天无忧无虑，就是为了长大长胖然后被杀？这样的家庭养育观念影响着一代又一代人，虽然不是绝对，但在中国是大多数的。<br/></p>
+<p>散养，就是在困难中成长。<br/></p>
+<p>我们来看一个问题，中国古代，中原王朝都是定居，而北方民族则是游牧。定居当然有定居的好处，不必担心大自然的侵害，也有比较稳定的粮食来源，后期有了城邦，更是固若金汤，安居乐业。然而长期的安逸会消磨人的意志，每个朝代都不能长治万代，这也是一个原因吧。而朝代的更迭，多次是外族入侵，而外族，正是那些北方游牧民族。为了生存，不仅有族群间的草场争夺，还要随气候迁徙，以适应大自然，不时还会有草原猛兽的袭击，他们一直生活在争夺与防卫中。对他们来说，南下进攻中原也许只是平日里的一次迁徙吧，只是规模有些大而已。<br/></p>
+<p>显然，游牧民族属于散养，而王朝的子民们则过着无忧无虑小羊一样的生活，最后只能被宰杀。散养的孩子从小就锻炼出自理，自立，与人交往等一些能力，甚至对外部世界也有一些认识，而其他孩子则按部就班的生长着，当他们意识到一些问题，并有意识的培养相应能力的时候，散养的孩子已经开辟出自己的一片天地了。</p>
+<p>散养不是真的放任自流。<br/></p>
+<p>对于一个孩子，父母不应该仅凭自己小时候的境遇，来安排他的生活，而是观察他的兴趣方向，来加以指导，对他的道路予以修正或给予支持。就像古代习俗“抓周”一样，小孩子抓到什么就在相应方面予以启蒙教育。<br/></p>
+<p>困难永远是一个好老师，不要忽略这个问题，教育孩子不一定要谆谆教导才是好方法。在孩子小时候给他一个困境，比在他长大后寸步难行要好很多。<br/></p>
+<p>作为父母，担心孩子是肯定的，但不能把他禁锢在花棚里。作为一个孩子的我，想呼吁父母，请相信你的孩子，他会自己处理好一切，不必担心，让他去闯荡他的世界吧。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%87%A1%E5%BF%83%E6%89%80%E5%90%91-%E7%B4%A0%E5%B1%A5%E6%89%80%E5%BE%80/" class="category-chain-item">凡心所向-素履所往</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>散养的童年</div>
+      <div>https://vistar-terry.github.io/2015/12/15/散养的童年/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>万俟淋曦</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2015年12月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/04/20/%E2%80%9C%E5%A4%9A%E4%B9%B0%E4%BA%9B%E8%8D%AF%E5%B0%91%E4%B9%B0%E4%BA%9B%E6%A3%BA%E6%9D%90%E2%80%9D%E9%9A%8F%E6%83%B3/" title="“多买些药少买些棺材”随想">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">“多买些药少买些棺材”随想</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2015/09/10/%E5%AE%B6/" title="家">
+                        <span class="hidden-mobile">家</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"JV7rSTnvYv1angkfBfnTSurg-gzGzoHsz","appKey":"TpukcNtaVTvU5P3LbhMyYsqu","path":"window.location.pathname","placeholder":"(oﾟ▽ﾟ)o  留下你的邮箱，可以收到给你的回复哦！","avatar":"retro","meta":["nick","mail"],"requiredFields":["nick"],"pageSize":10,"lang":"zh-CN","highlight":true,"recordIP":true,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":true},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+      怕什么真理无穷，进一寸有一寸的欢喜
+    </div>
+  
+  
+    <div class="statistics">
+  <!-- pagePV -->
+  
+  <!-- sitePV -->
+  
+  <!-- siteUV -->
+  
+
+  
+    
+      <span id="busuanzi_container_page_pv" style="display: none">
+        本页总访问量 
+        <span id="busuanzi_value_page_pv"></span>
+         次 | 
+      </span>
+    
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        网站总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次 | 
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        网站总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,1203 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/mylogo.png">
+  <link rel="icon" href="/img/mylogo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="万俟淋曦">
+  <meta name="keywords" content="万俟淋曦,CSDN,Python,ROS,Robotics,AI,人工智能,机器学习,深度学习,计算机视觉,算法,编程,技术分享,学习笔记,项目经验,开源贡献">
+  
+    <meta name="description" content="淋曦的进击手记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="淋曦的进击手记">
+<meta property="og:url" content="https://www.vistary.cn/index.html">
+<meta property="og:site_name" content="淋曦的进击手记">
+<meta property="og:description" content="淋曦的进击手记">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="万俟淋曦">
+<meta property="article:tag" content="万俟淋曦,CSDN,Python,ROS,Robotics,AI,人工智能,机器学习,深度学习,计算机视觉,算法,编程,技术分享,学习笔记,项目经验,开源贡献">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>淋曦的进击手记</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/icon.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.vistary.cn","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"❤","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"JV7rSTnvYv1angkfBfnTSurg-gzGzoHsz","app_key":"TpukcNtaVTvU5P3LbhMyYsqu","server_url":"https://jv7rstnv.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://store.vistary.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>淋曦的进击手记</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content (desktop) -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/message/" target="_self">
+                <i class="iconfont icon-mail"></i>
+                <span>留言板</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile grid menu overlay -->
+<div id="mobile-grid-menu" class="d-lg-none">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-home-fill"></i>
+                  <span>首页</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/archives/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-archive-fill"></i>
+                  <span>归档</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/categories/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-category-fill"></i>
+                  <span>分类</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/tags/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-tags-fill"></i>
+                  <span>标签</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/about/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-user-fill"></i>
+                  <span>关于</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/links/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-link-fill"></i>
+                  <span>友链</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/message/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-mail"></i>
+                  <span>留言板</span>
+                </div>
+              </a>
+            </div>
+          
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
+            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-search"></i>
+                <span>搜索</span>
+              </div>
+            </a>
+          </div>
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
+               data-label-light="开灯"
+               data-label-dark="关灯">
+            <a href="javascript:;" aria-label="Color Toggle">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
+                <span id="mobile-color-toggle-label">关灯</span>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/banner/home_banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="月が綺麗ですね。"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<h1 style="display: none">淋曦的进击手记</h1>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/04/26/%E5%86%8D%E8%A7%81%EF%BC%8C%E5%90%91%E5%B1%B1%E6%B5%B7/" target="_self">
+          <img src="/img/article/sea.jpg" srcset="/img/loading.gif" lazyload alt="再见，向山海">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/26/%E5%86%8D%E8%A7%81%EF%BC%8C%E5%90%91%E5%B1%B1%E6%B5%B7/" target="_self">
+          再见，向山海
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/04/26/%E5%86%8D%E8%A7%81%EF%BC%8C%E5%90%91%E5%B1%B1%E6%B5%B7/" target="_self">
+        <div>
+          再见，向山海仿若花间一场梦 懵懵匆匆 匆匆懵懵 不再留恋 树上斑驳的思念 不再 池鱼吃掉了苔藓 我吃掉了从前   大梦一场向黄昏 独自一人 收拾盛宴之后 残羹冷 篝火烬 再见，世界终将老去 我也老去   翻身纵马寄闲云 不见红尘 不见红尘 人间纵有千番事 与我何干 与我何干   打开满是爬山虎的大门 眼前即是山海  身后也是山海 老去，新生，再见，不见   2024年4月26日
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-26 21:41" pubdate>
+              2024-04-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%87%A1%E5%BF%83%E6%89%80%E5%90%91-%E7%B4%A0%E5%B1%A5%E6%89%80%E5%BE%80/" class="category-chain-item">凡心所向-素履所往</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/04/25/%E5%BF%83%E5%90%91%E6%9A%96%E9%98%B3/" target="_self">
+          <img src="/img/article/sun.jpg" srcset="/img/loading.gif" lazyload alt="心向暖阳">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/25/%E5%BF%83%E5%90%91%E6%9A%96%E9%98%B3/" target="_self">
+          心向暖阳
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/04/25/%E5%BF%83%E5%90%91%E6%9A%96%E9%98%B3/" target="_self">
+        <div>
+          心向暖阳心向暖阳 万物光明 黑夜之所以黑暗 不是因为黑夜 看他的人 没有光进入眼睛 陌生人 希望你 心向暖阳 眼中有光   心向暖阳 万物吉祥 我的朋友们 没有谁一无是处 树上的青蝉，唱响了整个夏天 路边的小黄狗，每次都朝我微笑 我的朋友们  心向暖阳 沐浴晨光   心向暖阳 日思神往 我想要一座大房子 有很大很大的落地窗户 暖阳躺在沙发上 我的朋友们 每天都是开心的 我只想 心向暖阳 奔赴远方
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-25 22:34" pubdate>
+              2024-04-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%87%A1%E5%BF%83%E6%89%80%E5%90%91-%E7%B4%A0%E5%B1%A5%E6%89%80%E5%BE%80/" class="category-chain-item">凡心所向-素履所往</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/04/23/%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF%E6%B4%AA%E6%B0%B4%E7%8C%9B%E5%85%BD/" target="_self">
+          <img src="/img/article/flow.jpeg" srcset="/img/loading.gif" lazyload alt="我们都是洪水猛兽">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/23/%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF%E6%B4%AA%E6%B0%B4%E7%8C%9B%E5%85%BD/" target="_self">
+          我们都是洪水猛兽
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/04/23/%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF%E6%B4%AA%E6%B0%B4%E7%8C%9B%E5%85%BD/" target="_self">
+        <div>
+          我们都是洪水猛兽人类的独立思维能力可能是生物界很特别的存在了，但这一能力往往很容易受到环境的影响，变得不独立。 每个人的思维都是很活跃的，时时刻刻都在迸发出不同的念头，但都很微弱，直到有其他人的念头与之共鸣，就像一点星火找到了另一点星火，当有足够多的星火，形成了燎原之势，不仅能点燃干草，也能点燃其他人的念头，如裂变般迅速发展出一个念头的王国，每个人都是国王的一部分。这时念头不再是念头，而是一种坚定
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-23 21:10" pubdate>
+              2024-04-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%87%A1%E5%BF%83%E6%89%80%E5%90%91-%E7%B4%A0%E5%B1%A5%E6%89%80%E5%BE%80/" class="category-chain-item">凡心所向-素履所往</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/04/20/%E4%B8%B4%E5%AE%89%E9%9B%AA%C2%B7%E4%B8%89/" target="_self">
+          <img src="/img/article/snow3.jpg" srcset="/img/loading.gif" lazyload alt="临安雪·三">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/20/%E4%B8%B4%E5%AE%89%E9%9B%AA%C2%B7%E4%B8%89/" target="_self">
+          临安雪·三
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/04/20/%E4%B8%B4%E5%AE%89%E9%9B%AA%C2%B7%E4%B8%89/" target="_self">
+        <div>
+          临安雪·三西子裹银装 不见断桥雪 清气满乾坤 如见寒宫月 初霁一杯酒 共饮钱塘愁 欸乃声声慢 归舟载挚友   2024年4月20日·周二
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-20 21:10" pubdate>
+              2024-04-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%87%A1%E5%BF%83%E6%89%80%E5%90%91-%E7%B4%A0%E5%B1%A5%E6%89%80%E5%BE%80/" class="category-chain-item">凡心所向-素履所往</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/04/20/%E4%B8%B4%E5%AE%89%E9%9B%AA%C2%B7%E4%BA%8C/" target="_self">
+          <img src="/img/article/snow2.jpeg" srcset="/img/loading.gif" lazyload alt="临安雪·二">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/20/%E4%B8%B4%E5%AE%89%E9%9B%AA%C2%B7%E4%BA%8C/" target="_self">
+          临安雪·二
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/04/20/%E4%B8%B4%E5%AE%89%E9%9B%AA%C2%B7%E4%BA%8C/" target="_self">
+        <div>
+          临安雪·二槛外琼花逢玉露 天上瑶池人间物 驻足宁睛闻窸窣 万物轻吟梦语诉   2024年4月20日·周二
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-20 20:30" pubdate>
+              2024-04-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%87%A1%E5%BF%83%E6%89%80%E5%90%91-%E7%B4%A0%E5%B1%A5%E6%89%80%E5%BE%80/" class="category-chain-item">凡心所向-素履所往</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/04/20/%E4%B8%B4%E5%AE%89%E9%9B%AA%C2%B7%E4%B8%80/" target="_self">
+          <img src="/img/article/snow1.jpeg" srcset="/img/loading.gif" lazyload alt="临安雪·一">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/20/%E4%B8%B4%E5%AE%89%E9%9B%AA%C2%B7%E4%B8%80/" target="_self">
+          临安雪·一
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/04/20/%E4%B8%B4%E5%AE%89%E9%9B%AA%C2%B7%E4%B8%80/" target="_self">
+        <div>
+          临安雪·一经年游子意不解来时愁 岁入嘉平时候觅一叶归舟 万里山外海外楼 邀多年挚友共话春秋   凌冬苦寒日未着积腋裘 笑语不似王侯拥万座宫楼 千金塔刹蝉翼绸 待千年之后未必贵胄   2024年4月20日·周二
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-20 20:10" pubdate>
+              2024-04-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%87%A1%E5%BF%83%E6%89%80%E5%90%91-%E7%B4%A0%E5%B1%A5%E6%89%80%E5%BE%80/" class="category-chain-item">凡心所向-素履所往</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/04/17/%E6%B6%88%E5%A4%B1%E7%9A%84%E8%8C%83%E5%BE%B7%E5%8D%8E/" target="_self">
+          <img src="/img/article/atom.jpeg" srcset="/img/loading.gif" lazyload alt="消失的范德华">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/17/%E6%B6%88%E5%A4%B1%E7%9A%84%E8%8C%83%E5%BE%B7%E5%8D%8E/" target="_self">
+          消失的范德华
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/04/17/%E6%B6%88%E5%A4%B1%E7%9A%84%E8%8C%83%E5%BE%B7%E5%8D%8E/" target="_self">
+        <div>
+          消失的范德华在分子间细语 在虚无中逆旅 万物之所以存在 有艳阳 有细雨 山川碧绿 海阔天高   当你隐入尘烟 洪荒变得暗淡 上帝的世界变成沙堆 在幻境中飘渺蔓延   你从未走远 人类的眼光终究短浅 你无处不在又不可预见 忽而一瞬 又忽而无念 人类的时光终究短暂 文明一生 或是一念   2024年4月17日·周三
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-17 20:50" pubdate>
+              2024-04-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%87%A1%E5%BF%83%E6%89%80%E5%90%91-%E7%B4%A0%E5%B1%A5%E6%89%80%E5%BE%80/" class="category-chain-item">凡心所向-素履所往</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/04/16/%E5%88%9D%E9%9C%81/" target="_self">
+          <img src="/img/article/snowman.jpg" srcset="/img/loading.gif" lazyload alt="初霁">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/16/%E5%88%9D%E9%9C%81/" target="_self">
+          初霁
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/04/16/%E5%88%9D%E9%9C%81/" target="_self">
+        <div>
+          初霁山间雾气氤氲 水面似浊似浑 不见往昔粼光纹 独坐幽篁绿阶 枯木水中横斜 曾忆桃花难忆别   忽闻东风咋起 红衣素装舞姬 千里莺歌万里啼 马作山中响涧 忽而缓步觅闲 曲水算筹笑语烟   2024年4月16日·周二
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-16 21:10" pubdate>
+              2024-04-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%87%A1%E5%BF%83%E6%89%80%E5%90%91-%E7%B4%A0%E5%B1%A5%E6%89%80%E5%BE%80/" class="category-chain-item">凡心所向-素履所往</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/05/20/%E7%88%B1%E6%98%AF%E4%B8%80%E9%A6%96%E7%BC%A0%E7%BB%B5%E4%B8%8D%E6%96%AD%E7%9A%84%E6%AD%8C/" target="_self">
+          <img src="/img/article/sunset.jpg" srcset="/img/loading.gif" lazyload alt="爱是一首缠绵不断的歌">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2021/05/20/%E7%88%B1%E6%98%AF%E4%B8%80%E9%A6%96%E7%BC%A0%E7%BB%B5%E4%B8%8D%E6%96%AD%E7%9A%84%E6%AD%8C/" target="_self">
+          爱是一首缠绵不断的歌
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2021/05/20/%E7%88%B1%E6%98%AF%E4%B8%80%E9%A6%96%E7%BC%A0%E7%BB%B5%E4%B8%8D%E6%96%AD%E7%9A%84%E6%AD%8C/" target="_self">
+        <div>
+          爱是一首缠绵不断的歌关于一个人对于某件事物的喜爱与否这样的问题往往大多数时候是无法由个人的根本意志来回答的。 从光明与黑暗开始战斗的那一刻起，生石花已将世界的芳香孕育在心中。 那年夏末，明媚而又热烈的阳光亲吻着大地，沁人而又浓郁的花香逸满中庭。 我们，一群少年，聚在了一起，歌谣的前奏便由此鸣响。 当黑暗被染成白色，暗黑的恶魔灰飞烟灭，我们整装出发，为了各自心中那共同的理想，浴血奋战。 然而当黑暗在
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-05-20 21:10" pubdate>
+              2021-05-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%87%A1%E5%BF%83%E6%89%80%E5%90%91-%E7%B4%A0%E5%B1%A5%E6%89%80%E5%BE%80/" class="category-chain-item">凡心所向-素履所往</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/08/01/PointNet++%20%E6%96%87%E7%8C%AE%E7%BF%BB%E8%AF%91%E9%98%85%E8%AF%BB%E5%8F%8A%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB/" target="_self">
+          <img src="/img/article/paper.jpg" srcset="/img/loading.gif" lazyload alt="PointNet++ 文献翻译阅读及拓展阅读">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/08/01/PointNet++%20%E6%96%87%E7%8C%AE%E7%BF%BB%E8%AF%91%E9%98%85%E8%AF%BB%E5%8F%8A%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB/" target="_self">
+          PointNet++ 文献翻译阅读及拓展阅读
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2020/08/01/PointNet++%20%E6%96%87%E7%8C%AE%E7%BF%BB%E8%AF%91%E9%98%85%E8%AF%BB%E5%8F%8A%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB/" target="_self">
+        <div>
+          一、概览论文地址：https://arxiv.org/ftp/arxiv/papers/2003/2003.09644.pdf代码下载：https://github.com/charlesq34/pointnet2论文框架：研究目的： 增强 PointNet 识别细粒度模式的能力和对复杂场景的泛化能力，使其能够能够高效、稳健地学习深层点集特征。 解决方法：   递归应用PointNet的分层神经
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-01 21:02" pubdate>
+              2020-08-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/PointNet/" class="category-chain-item">PointNet++</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%82%B9%E4%BA%91/">#点云</a>
+            
+              <a href="/tags/%E6%96%87%E7%8C%AE/">#文献</a>
+            
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">#深度学习</a>
+            
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/">#计算机视觉</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span> 怕什么真理无穷，进一寸有一寸的欢喜 </span><br> <span id="siteRuntime">本站已运行: 正在加载...</span> <script> const birthDay = new Date("2020-01-01");  const updateRuntime = () => { const now = Date.now(); const diff = now - birthDay.getTime(); const yearMs = 1000 * 60 * 60 * 24 * 365; const years = Math.floor(diff / yearMs); const remainingAfterYears = diff % yearMs; const days = Math.floor(remainingAfterYears / (1000 * 60 * 60 * 24)); const hours = Math.floor((remainingAfterYears % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); const mins = Math.floor((remainingAfterYears % (1000 * 60 * 60)) / (1000 * 60)); const secs = Math.floor((remainingAfterYears % (1000 * 60)) / 1000); document.getElementById("siteRuntime").innerText = `本站已运行 ${years} 年 ${days} 天 ${hours} 时 ${mins} 分 ${secs} 秒`; }; updateRuntime(); setInterval(updateRuntime, 1000); </script> 
+    </div>
+  
+  
+    <div class="statistics">
+   <!-- 添加页面访问计数 -->
+  
+  
+
+  
+    <!-- 添加页面访问计数 -->
+    
+      <span id="openkounter-page-pv-container" style="display: none">
+        本页总访问量 
+        <span id="openkounter-page-pv"></span>
+         次 | 
+      </span>
+    
+    
+      <span id="openkounter-site-pv-container" style="display: none">
+        网站总访问量 
+        <span id="openkounter-site-pv"></span>
+         次 | 
+      </span>
+    
+    
+      <span id="openkounter-site-uv-container" style="display: none">
+        网站总访客数 
+        <span id="openkounter-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      浙ICP备2026038672号
+    </a>
+  </span>
+  
+</div>
+
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script defer src="/js/openkounter.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/openkounter.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

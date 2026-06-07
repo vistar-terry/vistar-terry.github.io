@@ -21,12 +21,12 @@
   <meta name="author" content="万俟淋曦">
   <meta name="keywords" content="万俟淋曦,CSDN,Python,ROS,Robotics,AI,人工智能,机器学习,深度学习,计算机视觉,算法,编程,技术分享,学习笔记,项目经验,开源贡献">
   
-    <meta name="description" content="由于linux系统自带的镜像源都在国外，国内用户下载或更新软件会比较慢，有时是非常慢，所以国内某些机构，如大学，研究院所，就在国内建了linux的镜像源服务器供国内linux用户使用，而我们要使用这些源，就要更改自己linux系统的更新源配置文件，接下来详述更新源操作步骤。 1. 首先我们要找到国内的镜像源路径 我选择了清华的镜像源，链接如下：清华镜像源 打开链接如下图： 接下来按图中提示操作即可">
+    <meta name="description" content="由于linux系统自带的镜像源都在国外，国内用户下载或更新软件会比较慢，有时是非常慢，所以国内某些机构，如大学，研究院所，就在国内建了linux的镜像源服务器供国内linux用户使用，而我们要使用这些源，就要更改自己linux系统的更新源配置文件，接下来详述更新源操作步骤。 1. 首先我们要找到国内的镜像源路径 我选择了清华的镜像源，链接如下： 清华镜像源 打开链接如下图：  接下来按图中提示操作">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ubuntu16.04更新源详细操作步骤">
 <meta property="og:url" content="https://www.vistary.cn/2020/03/29/ubuntu16.04%20%E6%9B%B4%E6%96%B0%E6%BA%90%E8%AF%A6%E7%BB%86%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/index.html">
 <meta property="og:site_name" content="淋曦的进击手记">
-<meta property="og:description" content="由于linux系统自带的镜像源都在国外，国内用户下载或更新软件会比较慢，有时是非常慢，所以国内某些机构，如大学，研究院所，就在国内建了linux的镜像源服务器供国内linux用户使用，而我们要使用这些源，就要更改自己linux系统的更新源配置文件，接下来详述更新源操作步骤。 1. 首先我们要找到国内的镜像源路径 我选择了清华的镜像源，链接如下：清华镜像源 打开链接如下图： 接下来按图中提示操作即可">
+<meta property="og:description" content="由于linux系统自带的镜像源都在国外，国内用户下载或更新软件会比较慢，有时是非常慢，所以国内某些机构，如大学，研究院所，就在国内建了linux的镜像源服务器供国内linux用户使用，而我们要使用这些源，就要更改自己linux系统的更新源配置文件，接下来详述更新源操作步骤。 1. 首先我们要找到国内的镜像源路径 我选择了清华的镜像源，链接如下： 清华镜像源 打开链接如下图：  接下来按图中提示操作">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.vistary.cn/img/article/linux.jpg">
 <meta property="article:published_time" content="2020-03-29T02:07:00.000Z">
@@ -114,7 +114,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.0.0"></head>
+<meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -412,7 +412,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          655 字
+          585 字
         
       </span>
     
@@ -423,7 +423,7 @@
         
         
         
-          6 分钟
+          5 分钟
         
       </span>
     
@@ -566,13 +566,30 @@
               <div class="markdown-body">
                 
                 <p>由于linux系统自带的镜像源都在国外，国内用户下载或更新软件会比较慢，有时是非常慢，所以国内某些机构，如大学，研究院所，就在国内建了linux的镜像源服务器供国内linux用户使用，而我们要使用这些源，就要更改自己linux系统的更新源配置文件，接下来详述更新源操作步骤。</p>
-<h3 id="1-首先我们要找到国内的镜像源路径"><a href="#1-首先我们要找到国内的镜像源路径" class="headerlink" title="1. 首先我们要找到国内的镜像源路径"></a><strong>1. 首先我们要找到国内的镜像源路径</strong></h3><p> 我选择了清华的镜像源，链接如下：<br><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">清华镜像源</a><br> 打开链接如下图：<br> <img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMTIyMTI0ODAyMDc0?x-oss-process=image/format,png" srcset="/img/loading.gif" lazyload alt="这里写图片描述"><br>接下来按图中提示操作即可。<br>也可以自己搜索其他的镜像源。</p>
-<h3 id="2-备份系统自带更新源配置文件"><a href="#2-备份系统自带更新源配置文件" class="headerlink" title="2. 备份系统自带更新源配置文件"></a><strong>2. 备份系统自带更新源配置文件</strong></h3><p>打开终端切换到管理员（修改配置文件需要较高权限，如不切换也可以在每条命令前加sudo，不过个人感觉有点麻烦），进入 <strong>&#x2F;etc&#x2F;apt</strong> 目录，找到 <strong>sources.list</strong> 文件，进行备份，如下图：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMTIyMTMwMDE4NDEz?x-oss-process=image/format,png" srcset="/img/loading.gif" lazyload alt="这里写图片描述"><br>也可以直接用命令：<strong>cp&nbsp; &#x2F;etc&#x2F;apt&#x2F;sources.list&nbsp; &#x2F;etc&#x2F;apt&#x2F;sources.list.backup</strong> ，则不用切换目录直接备份。</p>
-<h3 id="3-修改配置文件sources-list内容"><a href="#3-修改配置文件sources-list内容" class="headerlink" title="3.修改配置文件sources.list内容"></a><strong>3.修改配置文件sources.list内容</strong></h3><p>输入命令：<strong>gedit &nbsp; sources.list</strong> 打开文件，把文件内容全部删除，再把更新源路径粘贴进来。<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMTIyMTMwODU5OTI1?x-oss-process=image/format,png" srcset="/img/loading.gif" lazyload alt="这里写图片描述"></p>
-<p>粘贴后如下图：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMTIyMTMxMTI5NDI3?x-oss-process=image/format,png" srcset="/img/loading.gif" lazyload alt="这里写图片描述"><br>保存，退出。</p>
-<h3 id="4-更新源"><a href="#4-更新源" class="headerlink" title="4. 更新源"></a><strong>4. 更新源</strong></h3><p>输入命令：<strong>apt &nbsp; update</strong> （也可以用apt-get&nbsp;update，<a target="_blank" rel="noopener" href="https://blog.csdn.net/maizousidemao/article/details/79859669">apt与apt-get的区别</a>）</p>
-<p>开始更新源<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMTIyMTMxNDM1MjMy?x-oss-process=image/format,png" srcset="/img/loading.gif" lazyload alt="这里写图片描述"></p>
-<p>更新完成<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMTIyMTMxNTI1MjUz?x-oss-process=image/format,png" srcset="/img/loading.gif" lazyload alt="这里写图片描述"><br>我用了1分1秒，这一步根据网速不同，消耗时间也不同，有时特别慢，要耐心等待，直到出现“完成”。</p>
+<h3 id="1-首先我们要找到国内的镜像源路径"><strong>1. 首先我们要找到国内的镜像源路径</strong></h3>
+<p>我选择了清华的镜像源，链接如下：<br>
+<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">清华镜像源</a><br>
+打开链接如下图：<br>
+<img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMTIyMTI0ODAyMDc0?x-oss-process=image/format,png" srcset="/img/loading.gif" lazyload alt="这里写图片描述"><br>
+接下来按图中提示操作即可。<br>
+也可以自己搜索其他的镜像源。</p>
+<h3 id="2-备份系统自带更新源配置文件"><strong>2. 备份系统自带更新源配置文件</strong></h3>
+<p>打开终端切换到管理员（修改配置文件需要较高权限，如不切换也可以在每条命令前加sudo，不过个人感觉有点麻烦），进入 <strong>/etc/apt</strong> 目录，找到 <strong>sources.list</strong> 文件，进行备份，如下图：<br>
+<img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMTIyMTMwMDE4NDEz?x-oss-process=image/format,png" srcset="/img/loading.gif" lazyload alt="这里写图片描述"><br>
+也可以直接用命令：<strong>cp  /etc/apt/sources.list  /etc/apt/sources.list.backup</strong> ，则不用切换目录直接备份。</p>
+<h3 id="3-修改配置文件sources-list内容"><strong>3.修改配置文件sources.list内容</strong></h3>
+<p>输入命令：<strong>gedit   sources.list</strong> 打开文件，把文件内容全部删除，再把更新源路径粘贴进来。<br>
+<img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMTIyMTMwODU5OTI1?x-oss-process=image/format,png" srcset="/img/loading.gif" lazyload alt="这里写图片描述"></p>
+<p>粘贴后如下图：<br>
+<img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMTIyMTMxMTI5NDI3?x-oss-process=image/format,png" srcset="/img/loading.gif" lazyload alt="这里写图片描述"><br>
+保存，退出。</p>
+<h3 id="4-更新源"><strong>4. 更新源</strong></h3>
+<p>输入命令：<strong>apt   update</strong> （也可以用apt-get update，<a target="_blank" rel="noopener" href="https://blog.csdn.net/maizousidemao/article/details/79859669">apt与apt-get的区别</a>）</p>
+<p>开始更新源<br>
+<img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMTIyMTMxNDM1MjMy?x-oss-process=image/format,png" srcset="/img/loading.gif" lazyload alt="这里写图片描述"></p>
+<p>更新完成<br>
+<img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMTIyMTMxNTI1MjUz?x-oss-process=image/format,png" srcset="/img/loading.gif" lazyload alt="这里写图片描述"><br>
+我用了1分1秒，这一步根据网速不同，消耗时间也不同，有时特别慢，要耐心等待，直到出现“完成”。</p>
 
                 
               </div>
@@ -818,7 +835,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <span> 怕什么真理无穷，进一寸有一寸的欢喜 </span><br> <span id="siteRuntime">本站已运行: 正在加载...</span> <script> const birthDay = new Date("2020-01-01");  const updateRuntime = () => { const now = Date.now(); const diff = now - birthDay.getTime(); const yearMs = 1000 * 60 * 60 * 24 * 365; const years = Math.floor(diff / yearMs); const remainingAfterYears = diff % yearMs; const days = Math.floor(remainingAfterYears / (1000 * 60 * 60 * 24)); const hours = Math.floor((remainingAfterYears % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); const mins = Math.floor((remainingAfterYears % (1000 * 60 * 60)) / (1000 * 60)); const secs = Math.floor((remainingAfterYears % (1000 * 60)) / 1000); document.getElementById("siteRuntime").innerText = `本站已运行 ${years} 年 ${days} 天 ${hours} 时 ${mins} 分 ${secs} 秒`; }; updateRuntime(); setInterval(updateRuntime, 1000); </script> 
+       <span> 怕什么真理无穷，进一寸有一寸的欢喜 </span><br> <span id="siteRuntime">本站已运行: 正在加载...</span> <script> const birthDay = new Date("2020-01-01"); const updateRuntime = () => { const now = Date.now(); const diff = now - birthDay.getTime(); const yearMs = 1000 * 60 * 60 * 24 * 365; const years = Math.floor(diff / yearMs); const remainingAfterYears = diff % yearMs; const days = Math.floor(remainingAfterYears / (1000 * 60 * 60 * 24)); const hours = Math.floor((remainingAfterYears % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); const mins = Math.floor((remainingAfterYears % (1000 * 60 * 60)) / (1000 * 60)); const secs = Math.floor((remainingAfterYears % (1000 * 60)) / 1000); document.getElementById("siteRuntime").innerText = `本站已运行 ${years} 年 ${days} 天 ${hours} 时 ${mins} 分 ${secs} 秒`; }; updateRuntime(); setInterval(updateRuntime, 1000); </script> 
     </div>
   
   
